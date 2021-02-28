@@ -1,0 +1,6 @@
+{
+  "welcomeFile": "/basketball/index.html",
+  	"sendWelcomeFileRedirect": true,
+	"authenticationMethod":"none"
+  
+}
