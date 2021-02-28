@@ -1,0 +1,16 @@
+namespace ETL_New.services;
+
+@Schema: 'SYSTEM'
+context Google_Sheet_Data {
+
+    Entity Data {
+					    Date:		 				String(20);
+					key	Product:					String(50);
+						Price:						String(40);
+						Currency:					String(10);
+												
+						
+						
+};
+
+};

@@ -1,0 +1,10 @@
+{
+    "description": "Read Google Sheet data",
+    "action": "ETL_New.services:data.xsjs::getData",
+    "schedules": [
+       {
+          "description": "Read Google Sheet data",
+          "xscron": "* * * * * * */02" 
+       }
+    ]
+}

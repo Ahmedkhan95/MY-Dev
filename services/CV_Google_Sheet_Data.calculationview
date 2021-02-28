@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="CV_Google_Sheet_Data" applyPrivilegeType="ANALYTIC_PRIVILEGE" dataCategory="DIMENSION" schemaVersion="2.3" defaultClient="$$client$$" visibility="internal" outputViewType="Aggregation" calculationScenarioType="TREE_BASED" enforceSqlExecution="false">
+<descriptions defaultDescription="CV_Google_Sheet_Data"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="ETL_New.services::Google_Sheet_Data.Data" type="DATA_BASE_TABLE">
+    <viewAttributes allViewAttributes="true"/>
+    <columnObject schemaName="SYSTEM" columnObjectName="ETL_New.services::Google_Sheet_Data.Data"/>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="Currency"/>
+      <viewAttribute id="Date"/>
+      <viewAttribute id="Price"/>
+      <viewAttribute id="Product"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="#ETL_New.services::Google_Sheet_Data.Data">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Currency" source="Currency"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Date" source="Date"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Price" source="Price"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Product" source="Product"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="Date" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Date"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Date"/>
+    </attribute>
+    <attribute id="Product" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Product"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Product"/>
+    </attribute>
+    <attribute id="Price" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Price"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Price"/>
+    </attribute>
+    <attribute id="Currency" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Currency"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Currency"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/></logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="96" y="255"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

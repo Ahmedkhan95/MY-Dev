@@ -1,0 +1,9 @@
+host = "sheets.googleapis.com";
+port = 443;
+description = "Google API"; 
+pathPrefix = "/v4/spreadsheets/12UpXw7oVFlV3iqioBKtcfvjDLdA3kKCqptr5Z99YNe4/values/Sheet1?";
+authType = none;
+useProxy = false;
+timeout = 0;
+useSSL = true;
+sslAuth = anonymous;
